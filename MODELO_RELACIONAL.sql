@@ -1,11 +1,11 @@
 CREATE TABLE "PAIS" (
- "codigo_pais" INT PRIMARY KEY,
+ "codigo_pais" SERIAL PRIMARY KEY,
  "nombre_pais" VARCHAR(255) NOT NULL
 );
 
 
 CREATE TABLE "CIUDAD" (
- "codigo_ciudad" INT PRIMARY KEY,
+ "codigo_ciudad" SERIAL PRIMARY KEY,
  "nombre_ciudad" VARCHAR(255) NOT NULL,
  "codigo_pais" INT NOT NULL,
  FOREIGN KEY ("codigo_pais") REFERENCES "PAIS"("codigo_pais")
@@ -13,7 +13,7 @@ CREATE TABLE "CIUDAD" (
 
 
 CREATE TABLE "SUCURSAL" (
- "codigo_sucursal" INT PRIMARY KEY,
+ "codigo_sucursal" SERIAL PRIMARY KEY,
  "nombre_sucursal" VARCHAR(255) NOT NULL,
  "codigo_ciudad" INT NOT NULL,
  FOREIGN KEY ("codigo_ciudad") REFERENCES "CIUDAD"("codigo_ciudad")
@@ -21,7 +21,7 @@ CREATE TABLE "SUCURSAL" (
 
 
 CREATE TABLE "CLIENTE" (
- "codigo_cliente" INT PRIMARY KEY,
+ "codigo_cliente" SERIAL PRIMARY KEY,
  "codigo_sucursal" INT NOT NULL,
  "cedula_rif" VARCHAR(255) NOT NULL,
  "nombre_cliente" VARCHAR(255) NOT NULL,
@@ -34,13 +34,13 @@ CREATE TABLE "CLIENTE" (
 
 
 CREATE TABLE "TIPO_PRODUCTO" (
- "codigo_tipo_producto" INT PRIMARY KEY,
+ "codigo_tipo_producto" SERIAL PRIMARY KEY,
  "nombre_tipo_producto" VARCHAR(255) NOT NULL
 );
 
 
 CREATE TABLE "PRODUCTO" (
- "codigo_producto" INT PRIMARY KEY,
+ "codigo_producto" SERIAL PRIMARY KEY,
  "nombre_producto" VARCHAR(255) NOT NULL,
  "descripcion" TEXT,
  "codigo_tipo_producto" INT NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE "PRODUCTO" (
 
 
 CREATE TABLE "EVALUACION_SERVICIO" (
- "codigo_evaluacion_servicio" INT PRIMARY KEY,
+ "codigo_evaluacion_servicio" SERIAL PRIMARY KEY,
  "descripcion_evaluacion" TEXT NOT NULL
 );
 
@@ -65,7 +65,7 @@ CREATE TABLE "RECOMIENDA" (
 
 
 CREATE TABLE "CONTRATO" (
- "numero_contrato" INT PRIMARY KEY,
+ "numero_contrato" SERIAL PRIMARY KEY,
  "descripcion_contrato" TEXT NOT NULL
 );
 
@@ -74,16 +74,16 @@ CREATE TABLE "REGISTRO_CONTRATO" (
  "numero_contrato" INT NOT NULL,
  "codigo_producto" INT NOT NULL,
  "codigo_cliente" INT NOT NULL,
- "fecha_inicio" DATE,
+ "fecha_inicio" DATE NOT NULL,
  "fecha_fin" DATE,
- "monto" DECIMAL(10,2),
+ "monto" DECIMAL(10,2) NOT NULL,
  "estado_contrato" VARCHAR(255),
  PRIMARY KEY ("numero_contrato", "codigo_producto", "codigo_cliente")
 );
 
 
 CREATE TABLE "SINIESTRO" (
- "numero_siniestro" INT PRIMARY KEY,
+ "numero_siniestro" SERIAL PRIMARY KEY,
  "descripcion_siniestro" TEXT NOT NULL
 );
 
