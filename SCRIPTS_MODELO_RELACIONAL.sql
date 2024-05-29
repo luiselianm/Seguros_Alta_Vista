@@ -1,4 +1,4 @@
-INSERT INTO pais (nombre_pais)
+INSERT INTO "PAIS" (nombre_pais)
 VALUES 
     ('Argentina'),
     ('Brasil'),
@@ -11,7 +11,7 @@ VALUES
     ('Venezuela'),
     ('Japón');
 
-INSERT INTO ciudad (nombre_ciudad, codigo_pais)
+INSERT INTO "CIUDAD" (nombre_ciudad, codigo_pais)
 VALUES 
     ('Buenos Aires', 1),
     ('La Plata', 1),
@@ -31,6 +31,11 @@ VALUES
     ('Valparaíso', 8),
     ('Caracas', 9),
     ('Maracaibo', 9),
-    ('Tokio', 10);
+    ('Tokio', 10),
     ('Kyoto', 10);
 
+    INSERT INTO "SUCURSAL" (nombre_sucursal, codigo_ciudad)
+    SELECT CONCAT('Sucursal ', c.nombre_ciudad), c.codigo_ciudad
+    FROM "CIUDAD" c;
+	
+	
