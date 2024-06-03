@@ -1,13 +1,13 @@
-INSERT INTO "PAIS" (nombre_pais)
+INSERT INTO "Modelo_Relacional"."PAIS" (nombre_pais)
 VALUES 
     ('Argentina'),
     ('Brasil'),
     ('Estados Unidos'),
     ('Chile'),
     ('Venezuela'),
-    ('Canadá'),
+    ('Canadá');
 
-INSERT INTO "CIUDAD" (nombre_ciudad, codigo_pais)
+INSERT INTO "Modelo_Relacional"."CIUDAD" (nombre_ciudad, codigo_pais)
 VALUES 
     ('Buenos Aires', 1),
     ('La Plata', 1),
@@ -22,7 +22,7 @@ VALUES
     ('Toronto', 6),
     ('Montreal', 6);
 
-INSERT INTO "SUCURSAL" (nombre_sucursal, codigo_ciudad)
+INSERT INTO "Modelo_Relacional"."SUCURSAL" (nombre_sucursal, codigo_ciudad)
     SELECT CONCAT('Sucursal ', c.nombre_ciudad), c.codigo_ciudad
-    FROM "CIUDAD" c;
+    FROM "Modelo_Relacional"."CIUDAD" c;
 
