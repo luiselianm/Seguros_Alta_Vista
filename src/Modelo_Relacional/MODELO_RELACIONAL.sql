@@ -27,7 +27,7 @@ CREATE TABLE "Modelo_Relacional"."CLIENTE" (
     "nombre_cliente" VARCHAR(255) NOT NULL,
     "telefono" VARCHAR(255) NOT NULL UNIQUE,
     "email" VARCHAR(255) NOT NULL UNIQUE,
-    "sexo" CHAR(1) NOT NULL,
+    "sexo" CHAR(10) NOT NULL,
     "direccion" VARCHAR(255) NOT NULL,
     FOREIGN KEY ("codigo_sucursal") REFERENCES "Modelo_Relacional"."SUCURSAL"("codigo_sucursal")
 );
