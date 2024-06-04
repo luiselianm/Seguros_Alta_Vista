@@ -1,6 +1,6 @@
 CREATE TABLE "Modelo_Relacional"."PAIS" (
     "codigo_pais" SERIAL PRIMARY KEY,
-    "nombre_pais" VARCHAR(255) NOT NULL
+    "nombre_pais" VARCHAR(255) NOT NULL UNIQUE
 );
 
 
@@ -14,7 +14,7 @@ CREATE TABLE "Modelo_Relacional"."CIUDAD" (
 
 CREATE TABLE "Modelo_Relacional"."SUCURSAL" (
     "codigo_sucursal" SERIAL PRIMARY KEY,
-    "nombre_sucursal" VARCHAR(255) NOT NULL,
+    "nombre_sucursal" VARCHAR(255) NOT NULL UNIQUE,
     "codigo_ciudad" INT NOT NULL,
     FOREIGN KEY ("codigo_ciudad") REFERENCES "Modelo_Relacional"."CIUDAD"("codigo_ciudad")
 );
@@ -23,10 +23,10 @@ CREATE TABLE "Modelo_Relacional"."SUCURSAL" (
 CREATE TABLE "Modelo_Relacional"."CLIENTE" (
     "codigo_cliente" SERIAL PRIMARY KEY,
     "codigo_sucursal" INT NOT NULL,
-    "cedula_rif" VARCHAR(255) NOT NULL,
+    "cedula_rif" VARCHAR(255) NOT NULL UNIQUE,
     "nombre_cliente" VARCHAR(255) NOT NULL,
-    "telefono" VARCHAR(255) NOT NULL,
-    "email" VARCHAR(255) NOT NULL,
+    "telefono" VARCHAR(255) NOT NULL UNIQUE,
+    "email" VARCHAR(255) NOT NULL UNIQUE,
     "sexo" CHAR(1) NOT NULL,
     "direccion" VARCHAR(255) NOT NULL,
     FOREIGN KEY ("codigo_sucursal") REFERENCES "Modelo_Relacional"."SUCURSAL"("codigo_sucursal")
@@ -44,7 +44,7 @@ CREATE TABLE "Modelo_Relacional"."PRODUCTO" (
     "nombre_producto" VARCHAR(255) NOT NULL,
     "descripcion" TEXT,
     "codigo_tipo_producto" INT NOT NULL,
-    "calificacion" DECIMAL(3,2) NOT NULL,
+    "calificacion" INT NOT NULL,
     FOREIGN KEY ("codigo_tipo_producto") REFERENCES "Modelo_Relacional"."TIPO_PRODUCTO"("codigo_tipo_producto")
 );
 
