@@ -16,4 +16,4 @@ Proyecto realizado en la materia de Inteligencia de Negocios en la UCAB
 
 3. Crear 2 schemas ```Modelo_Relacional``` y ```Modelo_Dimensional``` dentro de la base de datos creada.
 
-4. Ejecutar los creates y los scripts de cada schema dentro de un Query Tool.
+4. Ejecutar los creates y las seed de cada schema dentro de un Query Tool.
