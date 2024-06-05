@@ -55,39 +55,13 @@ VALUES
 
 INSERT INTO "Modelo_Relacional"."TIPO_PRODUCTO" (nombre_tipo_producto)
 VALUES 
-    ('Seguro Personal'),
-    ('Seguro Familiar'),
-    ('Seguro Vehicular'),
-    ('Seguro de Vivienda'),
-    ('Seguro Viajero'),
-    ('Seguro Empresarial');
+    ('Personal'),
+    ('Prestación de Servicios'),
+    ('Daños'),
+    ('Patrimonial');
 
 INSERT INTO "Modelo_Relacional"."PRODUCTO" (nombre_producto, descripcion, codigo_tipo_producto, calificacion)
 VALUES 
     ('Seguro Menor de edad', 'Seguro de salud para personas menores a 18 años de edad', 1, 5),
     ('Seguro Adulto mayor', 'Seguro de salud para personas mayores a 60 años de edad', 1, 5),
-    ('Seguro Adulto', 'Seguro de salud para personas meyores a 18 años y menores a 60 años', 1, 5),
-    ('Seguro Familia pequeña', 'Seguro de salud para familias de 3 integrantes o menos', 2, 5),
-    ('Seguro Familia grande', 'Seguro de salud para familias de más de 3 integrantes', 2, 5),
-    ('Seguro de auto sedan', 'Seguro de vehículo para automoviles de tipo sedan', 3, 5),
-    ('Seguro de auto hatchback', 'Seguro de vehículo para autos tipo hatchback', 3, 5),
-    ('Seguro de auto suv', 'Seguro de vehículo para autos tipo suv', 3, 5),
-    ('Seguro de auto todoterrenos', 'Seguro de vehículo para autos tipo todoterrenos', 3, 5),
-    ('Seguro de motocicletas', 'Seguro de vehículo para motocicletas', 3, 5),
-    ('Seguro de estudio', 'Seguro de vivienda de tipo estudio', 4, 5),
-    ('Seguro de apartamento', 'Seguro de vivienda para apartamentos de 1 piso y no más de 4 hábitaciones', 4, 5),
-    ('Seguro de penthouse', 'Seguro de vivienda para apartamentos de 2 pisos y hasta 6 hábitaciones', 4, 5),
-    ('Seguro de casa', 'Seguro de vivienda para casas de no más de 180 métros cuadrados', 4, 5),
-    ('Seguro de quinta', 'Seguro de vivienda para casas de entre 180 y 300 métros cuadrados', 4, 5),
-    ('Seguro de mansión', 'Seguro de vivienda para casas de más de 300 métros cuadrados', 4, 5),
-    ('Seguro viaje Europa', 'Seguro de viaje para personas que viajen a Europa', 5, 5),
-    ('Seguro viaje Asia', 'Seguro de viaje para personas que viajen a Asia', 5, 5),
-    ('Seguro viaje América del Norte', 'Seguro de viaje para personas que viajen a América', 5, 5),
-    ('Seguro viaje América del Sur', 'Seguro de viaje para personas que viajen a América', 5, 5),
-    ('Seguro viaje Centro América', 'Seguro de viaje para personas que viajen a Centro América', 5, 5),
-    ('Seguro viaje África', 'Seguro de viaje para personas que viajen a África', 5, 5),
-    ('Seguro viaje Oceanía', 'Seguro de viaje para personas que viajen a Oceanía', 5, 5),
-    ('Seguro startup', 'Seguro para empresas de hasta 15 empleados', 6, 5),
-    ('Seguro pyme', 'Seguro para empresas de hasta 50 empleados', 6, 5),
-    ('Seguro corporativo', 'Seguro para empresas de más de 50 empleados', 6, 5);
-
+    ('Seguro Adulto', 'Seguro de salud para personas meyores a 18 años y menores a 60 años', 1, 5);
