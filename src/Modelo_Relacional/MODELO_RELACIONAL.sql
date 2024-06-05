@@ -67,7 +67,7 @@ CREATE TABLE "Modelo_Relacional"."RECOMIENDA" (
 
 CREATE TABLE "Modelo_Relacional"."CONTRATO" (
     "numero_contrato" SERIAL PRIMARY KEY,
-    "descripcion_contrato" TEXT NOT NULL,
+    "descripcion_contrato" TEXT NOT NULL
 );
 
 
