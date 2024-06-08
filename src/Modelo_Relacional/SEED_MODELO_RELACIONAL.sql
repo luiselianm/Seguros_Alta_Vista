@@ -1,4 +1,4 @@
-INSERT INTO "Modelo_Relacional"."PAIS" (nombre_pais)
+INSERT INTO "SEGURO_G28052110"."PAIS" (nombre_pais)
 VALUES 
     ('Argentina'),
     ('Brasil'),
@@ -7,7 +7,7 @@ VALUES
     ('Venezuela'),
     ('Canadá');
 
-INSERT INTO "Modelo_Relacional"."CIUDAD" (nombre_ciudad, codigo_pais)
+INSERT INTO "SEGURO_G28052110"."CIUDAD" (nombre_ciudad, codigo_pais)
 VALUES 
     ('Buenos Aires', 1),
     ('La Plata', 1),
@@ -22,11 +22,11 @@ VALUES
     ('Toronto', 6),
     ('Montreal', 6);
 
-INSERT INTO "Modelo_Relacional"."SUCURSAL" (nombre_sucursal, codigo_ciudad)
+INSERT INTO "SEGURO_G28052110"."SUCURSAL" (nombre_sucursal, codigo_ciudad)
     SELECT CONCAT('Sucursal ', c.nombre_ciudad), c.codigo_ciudad
-    FROM "Modelo_Relacional"."CIUDAD" c;
+    FROM "SEGURO_G28052110"."CIUDAD" c;
 
-INSERT INTO "Modelo_Relacional"."CLIENTE" (codigo_sucursal, cedula_rif, nombre_cliente, telefono, email, sexo, direccion)
+INSERT INTO "SEGURO_G28052110"."CLIENTE" (codigo_sucursal, cedula_rif, nombre_cliente, telefono, email, sexo, direccion)
 VALUES 
     (1, 'E-10202297', 'Lionel Messi', '+54414-1010101', 'messi@gmail.com', 'M', 'Calle 1, Buenos Aires'),
     (1, 'E-10202298', 'Diego Maradona', '+54414-1010102', 'maradona@gmail.com', 'M', 'Calle 2, Buenos Aires'),
@@ -53,20 +53,20 @@ VALUES
     (12, 'E-10202319', 'Pascal Siakam', '+1416-1010103', 'pascalsiakam@gmail.com', 'M', 'Calle 23, Montreal'),
     (12, 'E-10202320', 'Jamal Murray', '+1416-1010104', 'jamalmurray@gmail.com', 'M', 'Calle 24, Montreal');
 
-INSERT INTO "Modelo_Relacional"."TIPO_PRODUCTO" (nombre_tipo_producto)
+INSERT INTO "SEGURO_G28052110"."TIPO_PRODUCTO" (nombre_tipo_producto)
 VALUES 
     ('Personal'),
     ('Prestación de Servicios'),
     ('Daños'),
     ('Patrimonial');
 
-INSERT INTO "Modelo_Relacional"."PRODUCTO" (nombre_producto, descripcion, codigo_tipo_producto, calificacion)
+INSERT INTO "SEGURO_G28052110"."PRODUCTO" (nombre_producto, descripcion, codigo_tipo_producto, calificacion)
 VALUES 
     ('Seguro Menor de edad', 'Seguro de salud para personas menores a 18 años de edad', 1, 5),
     ('Seguro Adulto mayor', 'Seguro de salud para personas mayores a 60 años de edad', 1, 5),
     ('Seguro Adulto', 'Seguro de salud para personas meyores a 18 años y menores a 60 años', 1, 5);
 
-INSERT INTO "Modelo_Relacional"."EVALUACION_SERVICIO" (descripcion_evaluacion)
+INSERT INTO "SEGURO_G28052110"."EVALUACION_SERVICIO" (descripcion_evaluacion)
 VALUES 
     ('1.- Malo'),
     ('2.- Regular'),
@@ -74,7 +74,7 @@ VALUES
     ('4.- Muy Bueno'),
     ('5.- Excelente');
 
-INSERT INTO "Modelo_Relacional"."RECOMIENDA" (codigo_cliente, codigo_evaluacion_servicio, codigo_producto, recomienda_amigo)
+INSERT INTO "SEGURO_G28052110"."RECOMIENDA" (codigo_cliente, codigo_evaluacion_servicio, codigo_producto, recomienda_amigo)
 VALUES
     (1, 4, 1, true),
     (2, 5, 2, true),
@@ -101,13 +101,13 @@ VALUES
     (23, 5, 2, true),
     (24, 5, 3, true);
 
-INSERT INTO "Modelo_Relacional"."CONTRATO" (descripcion_contrato)
+INSERT INTO "SEGURO_G28052110"."CONTRATO" (descripcion_contrato)
 VALUES 
     ('Contrato de seguro de salud para personas menores a 18 años de edad'),
     ('Contrato de seguro de salud para personas mayores a 60 años de edad'),
     ('Contrato de seguro de salud para personas meyores a 18 años y menores a 60 años');
 
-INSERT INTO "Modelo_Relacional"."REGISTRO_CONTRATO" (numero_contrato, codigo_cliente, codigo_producto, fecha_inicio, fecha_fin, monto, estado_contrato)
+INSERT INTO "SEGURO_G28052110"."REGISTRO_CONTRATO" (numero_contrato, codigo_cliente, codigo_producto, fecha_inicio, fecha_fin, monto, estado_contrato)
 VALUES
     (1, 1, 1, '2024-06-04', '2025-06-04', 1000.00, 'activo'),
     (2, 2, 2, '2024-06-04', '2025-06-04', 1000.00, 'activo'),
@@ -134,7 +134,7 @@ VALUES
     (2, 23, 2, '2024-06-04', '2025-06-04', 1000.00, 'activo'),
     (3, 24, 3, '2024-06-04', '2025-06-04', 1000.00, 'activo');
 
-INSERT INTO "Modelo_Relacional"."SINIESTRO" (descripcion_siniestro)
+INSERT INTO "SEGURO_G28052110"."SINIESTRO" (descripcion_siniestro)
 VALUES 
     ('Accidente de tránsito'),
     ('Incendio'),
@@ -143,7 +143,7 @@ VALUES
     ('Daños materiales'),
     ('Daños personales');
 
-INSERT INTO "Modelo_Relacional"."REGISTRO_SINIESTRO" (numero_siniestro, numero_contrato, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado)
+INSERT INTO "SEGURO_G28052110"."REGISTRO_SINIESTRO" (numero_siniestro, numero_contrato, fecha_siniestro, fecha_respuesta, id_rechazo, monto_reconocido, monto_solicitado)
 VALUES 
     (1, 1, '2024-06-06', '2024-06-06', 'no', 1000.00, 1000.00),
     (2, 2, '2024-06-07', '2024-06-07', 'no', 1000.00, 1000.00),
