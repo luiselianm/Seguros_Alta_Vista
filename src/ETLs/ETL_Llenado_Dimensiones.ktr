@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>ETL_Final_Proyecto</name>
+    <name>ETL_Llenado_Dimensiones</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -649,8 +649,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
-      <yloc>800</yloc>
+      <xloc>400</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -846,8 +846,8 @@ from "Modelo_Relacional"."CLIENTE"</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>608</yloc>
+      <xloc>80</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -918,8 +918,8 @@ from "Modelo_Relacional"."CLIENTE"</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>608</yloc>
+      <xloc>368</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -999,8 +999,8 @@ from "Modelo_Relacional"."CLIENTE"</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>704</yloc>
+      <xloc>80</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1051,8 +1051,8 @@ from "Modelo_Relacional"."CLIENTE"</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>704</yloc>
+      <xloc>368</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1103,8 +1103,8 @@ from "Modelo_Relacional"."CLIENTE"</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>800</yloc>
+      <xloc>560</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1162,8 +1162,8 @@ FROM "Modelo_Relacional"."REGISTRO_CONTRATO"</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>800</yloc>
+      <xloc>80</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1243,8 +1243,8 @@ FROM "Modelo_Relacional"."REGISTRO_CONTRATO"</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>416</yloc>
+      <xloc>80</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1295,8 +1295,8 @@ FROM "Modelo_Relacional"."REGISTRO_CONTRATO"</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>416</yloc>
+      <xloc>368</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1471,8 +1471,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>512</yloc>
+      <xloc>80</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1539,8 +1539,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>512</yloc>
+      <xloc>368</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1595,8 +1595,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>608</yloc>
+      <xloc>224</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1631,8 +1631,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>704</yloc>
+      <xloc>224</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1663,8 +1663,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>800</yloc>
+      <xloc>256</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1699,8 +1699,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>416</yloc>
+      <xloc>224</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1751,8 +1751,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>512</yloc>
+      <xloc>224</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1787,8 +1787,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>896</yloc>
+      <xloc>224</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1839,8 +1839,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>976</yloc>
+      <xloc>224</xloc>
+      <yloc>784</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1920,8 +1920,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>896</yloc>
+      <xloc>80</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1972,8 +1972,8 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>896</yloc>
+      <xloc>368</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2148,8 +2148,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>976</yloc>
+      <xloc>80</xloc>
+      <yloc>784</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2216,8 +2216,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>976</yloc>
+      <xloc>368</xloc>
+      <yloc>784</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2260,8 +2260,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>304</yloc>
+      <xloc>80</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2436,8 +2436,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>304</yloc>
+      <xloc>256</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2532,8 +2532,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>304</yloc>
+      <xloc>832</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2665,8 +2665,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>224</yloc>
+      <xloc>464</xloc>
+      <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2813,8 +2813,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>224</yloc>
+      <xloc>624</xloc>
+      <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2861,8 +2861,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>304</yloc>
+      <xloc>464</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3145,8 +3145,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>224</yloc>
+      <xloc>256</xloc>
+      <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3465,8 +3465,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>224</yloc>
+      <xloc>832</xloc>
+      <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3500,8 +3500,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>304</yloc>
+      <xloc>160</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3548,8 +3548,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>304</yloc>
+      <xloc>624</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3628,8 +3628,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>304</yloc>
+      <xloc>720</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3706,8 +3706,8 @@ AND c.codigo_pais = p.codigo_pais</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>304</yloc>
+      <xloc>352</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
