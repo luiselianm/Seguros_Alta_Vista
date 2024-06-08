@@ -667,7 +667,7 @@
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
     <sql>select codigo_cliente, nombre_cliente, cedula_rif, telefono, direccion, sexo, email
-from "Modelo_Relacional"."CLIENTE"</sql>
+from "SEGURO_G28052110"."CLIENTE"</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -863,7 +863,7 @@ from "Modelo_Relacional"."CLIENTE"</sql>
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <schema>"Modelo_Dimensional"</schema>
+    <schema>"SEGURO_DW_G28052110"</schema>
     <table>"DIM_CLIENTE"</table>
     <commit>1000</commit>
     <truncate>N</truncate>
@@ -935,7 +935,7 @@ from "Modelo_Relacional"."CLIENTE"</sql>
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <sql>select * from "Modelo_Relacional"."CONTRATO"</sql>
+    <sql>select * from "SEGURO_G28052110"."CONTRATO"</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1016,7 +1016,7 @@ from "Modelo_Relacional"."CLIENTE"</sql>
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <schema>"Modelo_Dimensional"</schema>
+    <schema>"SEGURO_DW_G28052110"</schema>
     <table>"DIM_CONTRATO"</table>
     <commit>1000</commit>
     <truncate>N</truncate>
@@ -1068,7 +1068,7 @@ from "Modelo_Relacional"."CLIENTE"</sql>
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <schema>"Modelo_Dimensional"</schema>
+    <schema>"SEGURO_DW_G28052110"</schema>
     <table>"DIM_ESTADO_CONTRATO"</table>
     <commit>1000</commit>
     <truncate>N</truncate>
@@ -1121,7 +1121,7 @@ from "Modelo_Relacional"."CLIENTE"</sql>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
     <sql>SELECT distinct estado_contrato 
-FROM "Modelo_Relacional"."REGISTRO_CONTRATO"</sql>
+FROM "SEGURO_G28052110"."REGISTRO_CONTRATO"</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1179,7 +1179,7 @@ FROM "Modelo_Relacional"."REGISTRO_CONTRATO"</sql>
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <sql>SELECT * FROM "Modelo_Relacional"."EVALUACION_SERVICIO"</sql>
+    <sql>SELECT * FROM "SEGURO_G28052110"."EVALUACION_SERVICIO"</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1193,7 +1193,7 @@ FROM "Modelo_Relacional"."REGISTRO_CONTRATO"</sql>
         <name>codigo_evaluacion_servicio</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>Contratos input 2</origin>
+        <origin>Evaluacion input</origin>
         <comments>codigo_evaluacion_servicio</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -1216,7 +1216,7 @@ FROM "Modelo_Relacional"."REGISTRO_CONTRATO"</sql>
         <name>descripcion_evaluacion</name>
         <length>15</length>
         <precision>-1</precision>
-        <origin>Contratos input 2</origin>
+        <origin>Evaluacion input</origin>
         <comments>descripcion_evaluacion</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1260,7 +1260,7 @@ FROM "Modelo_Relacional"."REGISTRO_CONTRATO"</sql>
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <schema>"Modelo_Dimensional"</schema>
+    <schema>"SEGURO_DW_G28052110"</schema>
     <table>"DIM_EVALUACION_SERVICIO"</table>
     <commit>1000</commit>
     <truncate>N</truncate>
@@ -1313,7 +1313,7 @@ FROM "Modelo_Relacional"."REGISTRO_CONTRATO"</sql>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
     <sql>select p.codigo_producto, p.nombre_producto, p.descripcion, p.codigo_tipo_producto, t.nombre_tipo_producto, p.calificacion
-from "Modelo_Relacional"."PRODUCTO" p, "Modelo_Relacional"."TIPO_PRODUCTO" t
+from "SEGURO_G28052110"."PRODUCTO" p, "SEGURO_G28052110"."TIPO_PRODUCTO" t
 where p.codigo_tipo_producto = t.codigo_tipo_producto
 </sql>
     <limit>0</limit>
@@ -1488,7 +1488,7 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <schema>"Modelo_Dimensional"</schema>
+    <schema>"SEGURO_DW_G28052110"</schema>
     <table>"DIM_PRODUCTO"</table>
     <commit>1000</commit>
     <truncate>N</truncate>
@@ -1856,7 +1856,7 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <sql>SELECT * FROM "Modelo_Relacional"."SINIESTRO"</sql>
+    <sql>SELECT * FROM "SEGURO_G28052110"."SINIESTRO"</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1937,7 +1937,7 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <schema>"Modelo_Dimensional"</schema>
+    <schema>"SEGURO_DW_G28052110"</schema>
     <table>"DIM_SINIESTRO"</table>
     <commit>1000</commit>
     <truncate>N</truncate>
@@ -1990,7 +1990,7 @@ where p.codigo_tipo_producto = t.codigo_tipo_producto
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
     <sql>SELECT s.codigo_sucursal ,s.nombre_sucursal, s.codigo_ciudad, c.nombre_ciudad, c.codigo_pais, p.nombre_pais  
-FROM "Modelo_Relacional"."SUCURSAL" s, "Modelo_Relacional"."CIUDAD" c, "Modelo_Relacional"."PAIS" p
+FROM "SEGURO_G28052110"."SUCURSAL" s, "SEGURO_G28052110"."CIUDAD" c, "SEGURO_G28052110"."PAIS" p
 WHERE s.codigo_ciudad = c.codigo_ciudad 
 AND c.codigo_pais = p.codigo_pais</sql>
     <limit>0</limit>
@@ -2006,7 +2006,7 @@ AND c.codigo_pais = p.codigo_pais</sql>
         <name>codigo_sucursal</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>Sucursal input  2</origin>
+        <origin>Sucursal input</origin>
         <comments>codigo_sucursal</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -2029,7 +2029,7 @@ AND c.codigo_pais = p.codigo_pais</sql>
         <name>nombre_sucursal</name>
         <length>255</length>
         <precision>-1</precision>
-        <origin>Sucursal input  2</origin>
+        <origin>Sucursal input</origin>
         <comments>nombre_sucursal</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -2052,7 +2052,7 @@ AND c.codigo_pais = p.codigo_pais</sql>
         <name>codigo_ciudad</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>Sucursal input  2</origin>
+        <origin>Sucursal input</origin>
         <comments>codigo_ciudad</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -2075,7 +2075,7 @@ AND c.codigo_pais = p.codigo_pais</sql>
         <name>nombre_ciudad</name>
         <length>255</length>
         <precision>-1</precision>
-        <origin>Sucursal input  2</origin>
+        <origin>Sucursal input</origin>
         <comments>nombre_ciudad</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -2098,7 +2098,7 @@ AND c.codigo_pais = p.codigo_pais</sql>
         <name>codigo_pais</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>Sucursal input  2</origin>
+        <origin>Sucursal input</origin>
         <comments>codigo_pais</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -2121,7 +2121,7 @@ AND c.codigo_pais = p.codigo_pais</sql>
         <name>nombre_pais</name>
         <length>255</length>
         <precision>-1</precision>
-        <origin>Sucursal input  2</origin>
+        <origin>Sucursal input</origin>
         <comments>nombre_pais</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -2165,7 +2165,7 @@ AND c.codigo_pais = p.codigo_pais</sql>
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <schema>"Modelo_Dimensional"</schema>
+    <schema>"SEGURO_DW_G28052110"</schema>
     <table>"DIM_SUCURSAL"</table>
     <commit>1000</commit>
     <truncate>N</truncate>
@@ -2453,7 +2453,7 @@ AND c.codigo_pais = p.codigo_pais</sql>
       <schema_name/>
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
-    <schema>"Modelo_Dimensional"</schema>
+    <schema>"SEGURO_DW_G28052110"</schema>
     <table>"DIM_TIEMPO"</table>
     <commit>100</commit>
     <truncate>N</truncate>
