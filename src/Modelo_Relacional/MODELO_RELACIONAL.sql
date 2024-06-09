@@ -78,7 +78,7 @@ CREATE TABLE "SEGURO_G28052110"."REGISTRO_CONTRATO" (
     "fecha_inicio" DATE NOT NULL,
     "fecha_fin" DATE,
     "monto" DECIMAL(10,2) NOT NULL,
-    "estado_contrato" VARCHAR(255),
+    "estado_contrato" VARCHAR(20),
     CONSTRAINT "estado_contrato" CHECK ("estado_contrato" IN ('activo', 'vencido', 'suspendido')),
     PRIMARY KEY ("numero_contrato", "codigo_producto", "codigo_cliente")
 );
