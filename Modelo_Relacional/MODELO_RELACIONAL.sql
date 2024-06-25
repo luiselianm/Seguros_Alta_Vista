@@ -92,12 +92,16 @@ CREATE TABLE "SEGURO_G28052110"."SINIESTRO" (
 
 CREATE TABLE "SEGURO_G28052110"."REGISTRO_SINIESTRO" (
     "numero_siniestro" INT NOT NULL REFERENCES "SEGURO_G28052110"."SINIESTRO"("numero_siniestro"),
-    "numero_contrato" INT NOT NULL REFERENCES "SEGURO_G28052110"."CONTRATO"("numero_contrato"),
+    "numero_contrato" INT NOT NULL, 
+    "codigo_cliente" INT NOT NULL, 
+    "codigo_producto" INT NOT NULL,
+    "codigo_sucursal" INT NOT NULL REFERENCES "SEGURO_G28052110"."SUCURSAL"("codigo_sucursal"),
     "fecha_siniestro" DATE NOT NULL,
     "fecha_respuesta" DATE NOT NULL,
     "id_rechazo" CHAR(2) NOT NULL,
     "monto_reconocido" DECIMAL(10,2) NOT NULL,
     "monto_solicitado" DECIMAL(10,2) NOT NULL,
+	FOREIGN KEY ("numero_contrato", "codigo_cliente", "codigo_producto") REFERENCES  "SEGURO_G28052110"."REGISTRO_CONTRATO"("numero_contrato", "codigo_cliente", "codigo_producto"),
     CONSTRAINT "id_rechazo" CHECK ("id_rechazo" IN ('si', 'no')),
-    PRIMARY KEY ("numero_siniestro", "numero_contrato", "fecha_siniestro")
+    PRIMARY KEY ("numero_siniestro", "numero_contrato", "codigo_cliente", "codigo_producto", "codigo_sucursal", "fecha_siniestro")
 );
