@@ -105,3 +105,16 @@ CREATE TABLE "SEGURO_G28052110"."REGISTRO_SINIESTRO" (
     CONSTRAINT "id_rechazo" CHECK ("id_rechazo" IN ('si', 'no')),
     PRIMARY KEY ("numero_siniestro", "numero_contrato", "codigo_cliente", "codigo_producto", "codigo_sucursal", "fecha_siniestro")
 );
+
+CREATE TABLE "SEGURO_G28052110"."METAS" (
+    "fecha_inicio" DATE NOT NULL,
+    "fecha_fin" DATE NOT NULL,
+    "codigo_producto" INT NOT NULL,
+    "numero_contrato" INT NOT NULL,
+    "meta_ingreso" REAL NOT NULL,
+    "meta_renovacion" INT NOT NULL,
+    "meta_asegurados" INT NOT NULL,
+    FOREIGN KEY ("numero_contrato") REFERENCES  "SEGURO_G28052110"."CONTRATO"("numero_contrato"),
+    FOREIGN KEY ("codigo_producto") REFERENCES  "SEGURO_G28052110"."PRODUCTO"("codigo_producto")
+    PRIMARY KEY ("fecha_inicio", "fecha_fin", "codigo_producto", "numero_contrato")
+);
