@@ -51,7 +51,33 @@ VALUES
     (11, 'E-10202317', 'Steve Nash', '+1416-1010101', 'nashhh@gmail.com', 'M', 'Calle 21, Toronto'),
     (11, 'E-10202318', 'Andrew Wiggins', '+1416-1010102', 'andrewwiggins@gmail.com', 'M', 'Calle 22, Toronto'),
     (12, 'E-10202319', 'Pascal Siakam', '+1416-1010103', 'pascalsiakam@gmail.com', 'M', 'Calle 23, Montreal'),
-    (12, 'E-10202320', 'Jamal Murray', '+1416-1010104', 'jamalmurray@gmail.com', 'M', 'Calle 24, Montreal');
+    (12, 'E-10202320', 'Jamal Murray', '+1416-1010104', 'jamalmurray@gmail.com', 'M', 'Calle 24, Montreal'),
+    (1, 'E-12345678', 'Serena Williams', '555-123-4567', 'serena@proplayer.com', 'F', 'Buenos Aires'),
+    (1, 'E-23456789', 'Simone Biles', '555-234-5678', 'simone@sporting.com', 'F', 'Buenos Aires'),
+    (2, 'E-34567890', 'Alex Morgan', '555-345-6789', 'alex@gmail.com', 'F', 'Calle 5, La plata'),
+    (2, 'E-45678901', 'Lindsey Vonn', '555-456-7890', 'lindsey@prosport.com', 'F', 'Calle 5, La plata'),
+    (3, 'E-56789012', 'Marta Vieira da Silva', '555-567-8901', 'martaV@gmail.com', 'F', 'Rio de janeiro'),
+    (3, 'E-67890123', 'Ronda Rousey', '555-678-9012', 'ronda@ufc.com', 'F', 'Rio de janeiro'),
+    (4, 'E-78901234', 'Danica Patrick', '555-789-0123', 'danica@player.com', 'F', 'Brasilia'),
+    (4, 'E-89012345', 'Hope Solo', '555-890-1234', 'hopesolo@gmail.com', 'F', 'Brasilia'),
+    (5, 'E-90123456', 'Gabby Douglas', '555-901-2345', 'gabby@gmail.com', 'F', 'Miami West Coast'),
+    (5, 'E-01234567', 'Venus Williams', '555-012-3456', 'venus@tnnis.com', 'F', 'Miami East Coast'),
+    (6, 'E-87654321', 'Maria Sharapova', '555-321-4567', 'maria@tnnis.com', 'F', 'Dallas Buyers Club'),
+    (7, 'E-76543210', 'Carli Lloyd', '555-180-5678', 'carli@gmail.com', 'F', 'Pt Bella Vista, Santiago')
+    (8, 'E-34512390', 'Tatiana Calderon', '555-561-8901', 'tatiana@f1.com', 'F', 'Vina del mar'),
+    (8, 'E-45612301', 'Mia Hamm', '555-400-7890', 'mia@gmail.com', 'F', 'Valparaiso'),
+    (9, 'E-59519012', 'Jessica Hawkins', '555-436-7890', 'jessica@gmail.com', 'F', 'Centro, Caracas'),
+    (9, 'V-69510123', 'Deyna Castellanos', '555-781-9012', 'dreyna@gmail.com', 'F', 'Caracas'),
+    (10,'E-78901194', 'Ana Paula Vázquez Flores', '555-000-7890', 'ana@gmail.com', 'F', 'La molleja, Maracaibo'),
+    (10,'E-89012195', 'Megan Rapinoe', '555-800-1234', 'megan@gmail.com', 'F', 'Pat acon, Maracaibo'),
+    (11,'E-90171456', 'Abby Wambach', '555-451-2345', 'abby@gmail.com', 'F', 'Toronto'),
+    (11,'E-01271567', 'Christine Sinclair', '555-013-3456', 'christine@gmail.com', 'F', 'Toronto'),
+    (12,'E-12371678', 'Birgit Prinz', '555-111-4567', 'birgit@gmail.com', 'F', 'Montreal, Calle 123'),
+    (12,'V-23456486', 'Homare Sawa', '555-223-5678', 'homare@egmailcom', 'F', 'Montreal, Ice Avenue'),
+    (6, 'V-34567486', 'Michelle Akers', '555-344-6789', 'michelle@gmail.com', 'F', 'Dallas Midtown'),
+    (7, 'V-45678486', 'Sun Wen', '555-466-7890', 'sun@gmail.com', 'F', 'San Francisco, Santiago');
+
+
 
 INSERT INTO "SEGURO_G28052110"."TIPO_PRODUCTO" (nombre_tipo_producto)
 VALUES 
