@@ -90,7 +90,20 @@ INSERT INTO "SEGURO_G28052110"."PRODUCTO" (nombre_producto, descripcion, codigo_
 VALUES 
     ('Seguro Menor de edad', 'Seguro de salud para personas menores a 18 años de edad', 1, 5),
     ('Seguro Adulto mayor', 'Seguro de salud para personas mayores a 60 años de edad', 1, 5),
-    ('Seguro Adulto', 'Seguro de salud para personas meyores a 18 años y menores a 60 años', 1, 5);
+    ('Seguro Adulto', 'Seguro de salud para personas meyores a 18 años y menores a 60 años', 1, 5),
+
+    ('Seguro de defensa juridica','Ofrece coberturas de los gastos relacionados a reclamaciones judiciales y litigios',2,3),
+    ('Seguro de asistencia de viaje','Cubre imprevistos durante el viaje: Perdida de equipaje, asistencia sanitaria o regreso anticipado',2,4),
+    ('Seguro de decesos','Cubre gastos de sepelio del asegurando según el capital contratado: tanatorio, flores, esquelas, tramites de defunción',2,5),
+
+    ('Seguro de incendios','Cubren los daños producidos si se incendia el objeto asegurado',3,4),
+    ('Seguro de robo','Ofrece coberturas de los gastos relacionados al robo o hurto del vehículo asegurado mediando violencia o intimidacion',3,3),
+    ('Seguro a valor nuevo','Ofrece el pago de la diferencia existente entre el valor real del bien asegurado en el momento del sinietro vs el valor en estado nuevo',3,4),
+
+    ('Seguro de coche','Ofrece coberturas de los gastos relacionados a siniestros con el vehículo asegurado',4,4),
+    ('Seguro de transporte','Ofrece cobertura ante perdida o daños de los bienes asegurados a consecuencia de riesgos de transporte',4,4),
+    ('Seguro de responsabilidad civil','Ofrece cobertura contra reclamaciones de indemnizaciones por daños personales o materiales',4,3);
+
 
 INSERT INTO "SEGURO_G28052110"."EVALUACION_SERVICIO" (descripcion_evaluacion)
 VALUES 
