@@ -75,6 +75,7 @@ CREATE TABLE "SEGURO_G28052110"."REGISTRO_CONTRATO" (
     "numero_contrato" INT NOT NULL REFERENCES "SEGURO_G28052110"."CONTRATO"("numero_contrato"),
     "codigo_producto" INT NOT NULL REFERENCES "SEGURO_G28052110"."PRODUCTO"("codigo_producto"),
     "codigo_cliente" INT NOT NULL REFERENCES "SEGURO_G28052110"."CLIENTE"("codigo_cliente"),
+    "codigo_sucursal" INT NOT NULL REFERENCES "SEGURO_G28052110"."SUCURSAL"("codigo_sucursal"),
     "fecha_inicio" DATE NOT NULL,
     "fecha_fin" DATE,
     "monto" DECIMAL(10,2) NOT NULL,
@@ -115,6 +116,6 @@ CREATE TABLE "SEGURO_G28052110"."METAS" (
     "meta_renovacion" INT NOT NULL,
     "meta_asegurados" INT NOT NULL,
     FOREIGN KEY ("numero_contrato") REFERENCES  "SEGURO_G28052110"."CONTRATO"("numero_contrato"),
-    FOREIGN KEY ("codigo_producto") REFERENCES  "SEGURO_G28052110"."PRODUCTO"("codigo_producto")
+    FOREIGN KEY ("codigo_producto") REFERENCES  "SEGURO_G28052110"."PRODUCTO"("codigo_producto"),
     PRIMARY KEY ("fecha_inicio", "fecha_fin", "codigo_producto", "numero_contrato")
 );
