@@ -63,7 +63,7 @@ VALUES
     (5, 'E-90123456', 'Gabby Douglas', '555-901-2345', 'gabby@gmail.com', 'F', 'Miami West Coast'),
     (5, 'E-01234567', 'Venus Williams', '555-012-3456', 'venus@tnnis.com', 'F', 'Miami East Coast'),
     (6, 'E-87654321', 'Maria Sharapova', '555-321-4567', 'maria@tnnis.com', 'F', 'Dallas Buyers Club'),
-    (7, 'E-76543210', 'Carli Lloyd', '555-180-5678', 'carli@gmail.com', 'F', 'Pt Bella Vista, Santiago')
+    (7, 'E-76543210', 'Carli Lloyd', '555-180-5678', 'carli@gmail.com', 'F', 'Pt Bella Vista, Santiago'),
     (8, 'E-34512390', 'Tatiana Calderon', '555-561-8901', 'tatiana@f1.com', 'F', 'Vina del mar'),
     (8, 'E-45612301', 'Mia Hamm', '555-400-7890', 'mia@gmail.com', 'F', 'Valparaiso'),
     (9, 'E-59519012', 'Jessica Hawkins', '555-436-7890', 'jessica@gmail.com', 'F', 'Centro, Caracas'),
@@ -148,7 +148,7 @@ VALUES
     
     ('Contrato de seguro de defensa juridica con coberturas de los gastos relacionados a reclamaciones judiciales y litigios'),
     ('Contrato de seguro asistencia de viaje con coberturas imprevistos durante el viaje'),
-    ('Contrato de seguro contra decesos con coberturas de gastos de sepelio del asegurando según el capital contratado')
+    ('Contrato de seguro contra decesos con coberturas de gastos de sepelio del asegurando según el capital contratado'),
     
     ('Contrato de seguro con coberturas de los daños producidos si se incendia el objeto asegurado'),
     ('Contrato de seguro con coberturas de los gastos relacionados al robo o hurto del vehículo asegurado mediando violencia o intimidacion'),
