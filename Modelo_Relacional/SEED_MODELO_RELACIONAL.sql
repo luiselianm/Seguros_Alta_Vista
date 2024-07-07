@@ -144,7 +144,19 @@ INSERT INTO "SEGURO_G28052110"."CONTRATO" (descripcion_contrato)
 VALUES 
     ('Contrato de seguro de salud para personas menores a 18 años de edad'),
     ('Contrato de seguro de salud para personas mayores a 60 años de edad'),
-    ('Contrato de seguro de salud para personas meyores a 18 años y menores a 60 años');
+    ('Contrato de seguro de salud para personas meyores a 18 años y menores a 60 años'),
+    
+    ('Contrato de seguro de defensa juridica con coberturas de los gastos relacionados a reclamaciones judiciales y litigios'),
+    ('Contrato de seguro asistencia de viaje con coberturas imprevistos durante el viaje'),
+    ('Contrato de seguro contra decesos con coberturas de gastos de sepelio del asegurando según el capital contratado')
+    
+    ('Contrato de seguro con coberturas de los daños producidos si se incendia el objeto asegurado'),
+    ('Contrato de seguro con coberturas de los gastos relacionados al robo o hurto del vehículo asegurado mediando violencia o intimidacion'),
+    ('Contrato de seguro con coberturas de los pagos de la diferencia existente entre el valor real del bien asegurado en el momento del sinietro vs el valor en estado nuevo'),
+
+    ('Contrato de seguro con coberturas de los gastos relacionados a siniestros con el vehículo asegurado'),
+    ('Contrato de seguro con cobertura ante perdida o daños de los bienes asegurados a consecuencia de riesgos de transporte'),
+    ('Contrato de seguro con cobertura contra reclamaciones de indemnizaciones por daños personales o materiales');
 
 INSERT INTO "SEGURO_G28052110"."REGISTRO_CONTRATO" (numero_contrato, codigo_cliente, codigo_producto, codigo_sucursal, fecha_inicio, fecha_fin, monto, estado_contrato)
 VALUES
@@ -171,7 +183,16 @@ VALUES
     (3, 21, 3, 9, '2024-06-04', '2025-06-04', 1400.00, 'activo'),
     (1, 22, 1, 10, '2024-06-04', '2025-06-04', 1550.00, 'activo'),
     (2, 23, 2, 11, '2024-06-04', '2025-06-04', 1020.00, 'activo'),
-    (3, 24, 3, 12, '2024-06-04', '2025-06-04', 1000.00, 'activo');
+    (3, 24, 3, 12, '2024-06-04', '2025-06-04', 1000.00, 'activo'),
+    (4, 1, 4, 1,  '2024-06-04', '2025-06-04', 2000.00, 'activo'),
+    (5, 2, 5, 2, '2024-06-04', '2025-06-04', 850.00, 'activo'),
+    (6, 3, 6, 3, '2024-06-04', '2025-06-04', 2500.00, 'activo'),
+    (7, 4, 7, 4, '2024-06-04', '2025-06-04', 1000.00, 'activo'),
+    (8, 5, 8, 5, '2024-06-04', '2025-06-04', 4000.00, 'vencido'),
+    (9, 6, 9, 6, '2024-06-04', '2025-06-04', 6000.00, 'vencido'),
+    (10, 7, 10, 7, '2024-06-04', '2025-06-04', 2300.00, 'activo'),
+    (11, 8, 11, 8, '2024-06-04', '2025-06-04', 3300.00, 'vencido'),
+    (12, 9, 12, 9, '2024-06-04', '2025-06-04', 4250.00, 'activo');
 
 INSERT INTO "SEGURO_G28052110"."SINIESTRO" (descripcion_siniestro)
 VALUES 
