@@ -6,6 +6,7 @@
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -551,7 +552,7 @@
     </partitioning>
     <connection>Seguros_Alta_Vista_Connection</connection>
     <sql>SELECT distinct estado_contrato 
-FROM "SEGURO_G28052110"."REGISTRO_CONTRATO"</sql>
+FROM "SEGURO_G28052110"."REGISTRO_CONTRATOS"</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -563,7 +564,7 @@ FROM "SEGURO_G28052110"."REGISTRO_CONTRATO"</sql>
         <type>String</type>
         <storagetype>normal</storagetype>
         <name>estado_contrato</name>
-        <length>255</length>
+        <length>20</length>
         <precision>-1</precision>
         <origin>Estado contrato input</origin>
         <comments>estado_contrato</comments>
