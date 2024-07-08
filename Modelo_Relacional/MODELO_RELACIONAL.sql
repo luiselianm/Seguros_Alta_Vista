@@ -71,17 +71,21 @@ CREATE TABLE "SEGURO_G28052110"."CONTRATO" (
 );
 
 
-CREATE TABLE "SEGURO_G28052110"."REGISTRO_CONTRATO" (
-    "numero_contrato" INT NOT NULL REFERENCES "SEGURO_G28052110"."CONTRATO"("numero_contrato"),
-    "codigo_producto" INT NOT NULL REFERENCES "SEGURO_G28052110"."PRODUCTO"("codigo_producto"),
-    "codigo_cliente" INT NOT NULL REFERENCES "SEGURO_G28052110"."CLIENTE"("codigo_cliente"),
-    "codigo_sucursal" INT NOT NULL REFERENCES "SEGURO_G28052110"."SUCURSAL"("codigo_sucursal"),
+CREATE TABLE "SEGURO_G28052110"."REGISTRO_CONTRATOS" (
+    "numero_contrato" INT NOT NULL,
+    "codigo_producto" INT NOT NULL,
+    "codigo_cliente" INT NOT NULL, 
+    "codigo_sucursal" INT NOT NULL,
     "fecha_inicio" DATE NOT NULL,
     "fecha_fin" DATE,
     "monto" DECIMAL(10,2) NOT NULL,
     "estado_contrato" VARCHAR(20),
+    FOREIGN KEY ("numero_contrato") REFERENCES "SEGURO_G28052110"."CONTRATO"("numero_contrato"),
+    FOREIGN KEY ("codigo_producto") REFERENCES "SEGURO_G28052110"."PRODUCTO"("codigo_producto"),
+    FOREIGN KEY ("codigo_cliente") REFERENCES "SEGURO_G28052110"."CLIENTE"("codigo_cliente"),
+    FOREIGN KEY ("codigo_sucursal") REFERENCES "SEGURO_G28052110"."SUCURSAL"("codigo_sucursal"),
     CONSTRAINT "estado_contrato" CHECK ("estado_contrato" IN ('activo', 'vencido', 'suspendido')),
-    PRIMARY KEY ("numero_contrato", "codigo_producto", "codigo_cliente")
+    PRIMARY KEY ("numero_contrato", "codigo_producto", "codigo_cliente", "codigo_sucursal")
 );
 
 
@@ -96,13 +100,13 @@ CREATE TABLE "SEGURO_G28052110"."REGISTRO_SINIESTRO" (
     "numero_contrato" INT NOT NULL, 
     "codigo_cliente" INT NOT NULL, 
     "codigo_producto" INT NOT NULL,
-    "codigo_sucursal" INT NOT NULL REFERENCES "SEGURO_G28052110"."SUCURSAL"("codigo_sucursal"),
+    "codigo_sucursal" INT NOT NULL,
     "fecha_siniestro" DATE NOT NULL,
     "fecha_respuesta" DATE NOT NULL,
     "id_rechazo" CHAR(2) NOT NULL,
     "monto_reconocido" DECIMAL(10,2) NOT NULL,
     "monto_solicitado" DECIMAL(10,2) NOT NULL,
-	FOREIGN KEY ("numero_contrato", "codigo_cliente", "codigo_producto") REFERENCES  "SEGURO_G28052110"."REGISTRO_CONTRATO"("numero_contrato", "codigo_cliente", "codigo_producto"),
+    FOREIGN KEY ("numero_contrato", "codigo_cliente", "codigo_producto", "codigo_sucursal") REFERENCES  "SEGURO_G28052110"."REGISTRO_CONTRATOS"("numero_contrato", "codigo_cliente", "codigo_producto", "codigo_sucursal"),
     CONSTRAINT "id_rechazo" CHECK ("id_rechazo" IN ('si', 'no')),
     PRIMARY KEY ("numero_siniestro", "numero_contrato", "codigo_cliente", "codigo_producto", "codigo_sucursal", "fecha_siniestro")
 );
