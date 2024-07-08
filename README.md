@@ -12,7 +12,7 @@
 
 Proyecto realizado en la materia de Inteligencia de Negocios en la UCAB
 
-## Para correr el proyecto
+## Para probar el proyecto
 
 1. Clonar el repositorio.
 
@@ -25,4 +25,5 @@ Proyecto realizado en la materia de Inteligencia de Negocios en la UCAB
 5. Crear la conexión a la base de datos dentro de cada proceso ETL.
 
 6. Ejecutar el ```Job_Run_All_ETLs``` para llenar todas las dimensiones y las tablas de hechos.
-   
+
+7. Abrir el dashboard ```Dashboard_Seguros_Alta_Vista.pbix``` y creamos las conexiones respectivas con las tablas del modelo dimensional.
