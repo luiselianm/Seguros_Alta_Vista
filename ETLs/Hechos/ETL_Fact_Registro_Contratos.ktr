@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>ETL_Fact_Registro_Contrato</name>
+    <name>ETL_Fact_Registro_Contratos</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,10 +427,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2024/06/09 01:16:08.765</created_date>
+    <created_date>2024/07/07 13:11:37.472</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2024/06/09 01:16:08.765</modified_date>
-    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2024/07/07 13:11:37.472</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -488,83 +488,8 @@
   </connection>
   <order>
     <hop>
-      <from>Registro Contrato</from>
-      <to>Fecha de inicio</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Registro Contrato</from>
-      <to>Fecha de fin</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Registro Contrato</from>
-      <to>Cliente</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Registro Contrato</from>
-      <to>Producto</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Registro Contrato</from>
-      <to>Estado Contrato</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Registro Contrato</from>
-      <to>Contrato</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>DIM_TIEMPO</from>
-      <to>Ordenar fechas</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Ordenar fechas</from>
-      <to>Unir fecha inicio</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Ordenar fechas</from>
-      <to>Unir fecha fin</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Fecha de fin</from>
-      <to>Unir fecha fin</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Fecha de inicio</from>
-      <to>Unir fecha inicio</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>DIM_CONTRATO</from>
-      <to>Ordenar Contratos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>DIM_CLIENTE</from>
-      <to>Ordenar Clientes</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>DIM_PRODUCTO</from>
-      <to>Ordenar Productos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>DIM_ESTADO_CONTRATO</from>
-      <to>Ordenar Est Contratos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Ordenar Clientes</from>
-      <to>Unir Clientes</to>
+      <from>Add constants</from>
+      <to>Insert / update</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -578,23 +503,28 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Ordenar Contratos</from>
-      <to>Unir Contratos</to>
+      <from>DIM_CLIENTE</from>
+      <to>Ordenar Clientes</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Ordenar Productos</from>
-      <to>Unir Productos</to>
+      <from>DIM_CONTRATO</from>
+      <to>Ordenar Contratos</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Producto</from>
-      <to>Unir Productos</to>
+      <from>DIM_ESTADO_CONTRATO</from>
+      <to>Ordenar Est Contratos</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Ordenar Est Contratos</from>
-      <to>Unir Est Contratos</to>
+      <from>DIM_PRODUCTO</from>
+      <to>Ordenar Productos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>DIM_TIEMPO</from>
+      <to>Ordenar fechas</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -603,33 +533,63 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unir fecha inicio</from>
-      <to>Ordenar por fecha inicio</to>
+      <from>FECHA_FIN</from>
+      <to>Unir fechas</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unir fecha fin</from>
-      <to>Ordenar por fecha fin</to>
+      <from>FECHA_INICIO</from>
+      <to>Unir fechas</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unir Clientes</from>
-      <to>Ordenar por clientes</to>
+      <from>Fecha de fin</from>
+      <to>Unir fecha fin</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unir Contratos</from>
-      <to>Ordenar por contrato</to>
+      <from>Fecha de inicio</from>
+      <to>Unir fecha inicio</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unir Productos</from>
-      <to>Ordenar por productos</to>
+      <from>Ordenar</from>
+      <to>Unir todo</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unir Est Contratos</from>
-      <to>Ordenar por est contrato</to>
+      <from>Ordenar Clientes</from>
+      <to>Unir Clientes</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenar Contratos</from>
+      <to>Unir Contratos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenar Est Contratos</from>
+      <to>Unir Est Contratos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenar Productos</from>
+      <to>Unir Productos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenar clientes y contratos</from>
+      <to>Unir fechas, clientes y contratos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenar fechas</from>
+      <to>Unir fecha fin</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenar fechas</from>
+      <to>Unir fecha inicio</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -643,33 +603,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Ordenar por productos</from>
-      <to>Unir productos y est contrato</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Ordenar por est contrato</from>
       <to>Unir productos y est contrato</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Unir fechas</from>
-      <to>Ordenar por fechas </to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Unir clientes y contratos</from>
-      <to>Ordenar clientes y contratos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Unir productos y est contrato</from>
-      <to>Ordenar prodcuto y est contrato</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Ordenar por fecha inicio</from>
-      <to>FECHA_INICIO</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -678,13 +613,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>FECHA_INICIO</from>
-      <to>Unir fechas</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>FECHA_FIN</from>
-      <to>Unir fechas</to>
+      <from>Ordenar por fecha inicio</from>
+      <to>FECHA_INICIO</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -693,8 +623,53 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Ordenar clientes y contratos</from>
-      <to>Unir fechas, clientes y contratos</to>
+      <from>Ordenar por productos</from>
+      <to>Unir productos y est contrato</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Producto</from>
+      <to>Unir Productos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unir Clientes</from>
+      <to>Ordenar por clientes</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unir Contratos</from>
+      <to>Ordenar por contrato</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unir Est Contratos</from>
+      <to>Ordenar por est contrato</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unir Productos</from>
+      <to>Ordenar por productos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unir clientes y contratos</from>
+      <to>Ordenar clientes y contratos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unir fecha fin</from>
+      <to>Ordenar por fecha fin</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unir fecha inicio</from>
+      <to>Ordenar por fecha inicio</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unir fechas</from>
+      <to>Ordenar por fechas </to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -703,13 +678,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Ordenar</from>
-      <to>Unir todo</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Ordenar prodcuto y est contrato</from>
-      <to>Unir todo</to>
+      <from>Unir productos y est contrato</from>
+      <to>Ordenar prodcuto y est contrato</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -723,11 +693,300 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Add constants</from>
-      <to>Insert / update</to>
+      <from>DIM SUCURSAL</from>
+      <to>Ordenar Sucursal</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenar Sucursal</from>
+      <to>Unir Sucursales</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sucursales</from>
+      <to>Unir Sucursales</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Registro contratos</from>
+      <to>Sucursales</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Registro contratos</from>
+      <to>Fecha de inicio</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Registro contratos</from>
+      <to>Fecha de fin</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Registro contratos</from>
+      <to>Cliente</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Registro contratos</from>
+      <to>Contrato</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Registro contratos</from>
+      <to>Producto</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Registro contratos</from>
+      <to>Estado Contrato</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unir Sucursales</from>
+      <to>Ordenar Sucursales</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenar Sucursales</from>
+      <to>Unir Sucursales, Contratos y Productos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenar prodcuto y est contrato</from>
+      <to>Unir Sucursales, Contratos y Productos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unir Sucursales, Contratos y Productos</from>
+      <to>Ordenar Sucursales, Contratos y Productos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Ordenar Sucursales, Contratos y Productos</from>
+      <to>Unir todo</to>
       <enabled>Y</enabled>
     </hop>
   </order>
+  <step>
+    <name>Registro contratos</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Seguros_Alta_Vista_Connection</connection>
+    <sql>SELECT * FROM "SEGURO_G28052110"."REGISTRO_CONTRATOS"</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>numero_contrato</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Registro contratos</origin>
+        <comments>numero_contrato</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>codigo_producto</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Registro contratos</origin>
+        <comments>codigo_producto</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>codigo_cliente</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Registro contratos</origin>
+        <comments>codigo_cliente</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>codigo_sucursal</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Registro contratos</origin>
+        <comments>codigo_sucursal</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>fecha_inicio</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Registro contratos</origin>
+        <comments>fecha_inicio</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>fecha_fin</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>Registro contratos</origin>
+        <comments>fecha_fin</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>monto</name>
+        <length>10</length>
+        <precision>2</precision>
+        <origin>Registro contratos</origin>
+        <comments>monto</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>estado_contrato</name>
+        <length>20</length>
+        <precision>-1</precision>
+        <origin>Registro contratos</origin>
+        <comments>estado_contrato</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Add constants</name>
     <type>Constant</type>
@@ -798,8 +1057,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1536</xloc>
-      <yloc>544</yloc>
+      <xloc>1584</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -840,8 +1099,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>320</yloc>
+      <xloc>288</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -882,8 +1141,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>464</yloc>
+      <xloc>288</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -913,7 +1172,7 @@
         <name>SK_DIM_CLIENTE</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>DIM_CLIENTE</origin>
         <comments>SK_DIM_CLIENTE</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -936,7 +1195,7 @@
         <name>COD_CLIENTE</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>Table input</origin>
+        <origin>DIM_CLIENTE</origin>
         <comments>COD_CLIENTE</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -959,7 +1218,7 @@
         <name>NOMBRE_CLIENTE</name>
         <length>25</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>DIM_CLIENTE</origin>
         <comments>NOMBRE_CLIENTE</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -982,7 +1241,7 @@
         <name>CI_RIF</name>
         <length>45</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>DIM_CLIENTE</origin>
         <comments>CI_RIF</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1005,7 +1264,7 @@
         <name>TELEFONO</name>
         <length>45</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>DIM_CLIENTE</origin>
         <comments>TELEFONO</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1028,7 +1287,7 @@
         <name>DIRECCION</name>
         <length>45</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>DIM_CLIENTE</origin>
         <comments>DIRECCION</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1051,7 +1310,7 @@
         <name>SEXO</name>
         <length>45</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>DIM_CLIENTE</origin>
         <comments>SEXO</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1074,7 +1333,7 @@
         <name>EMAIL</name>
         <length>45</length>
         <precision>-1</precision>
-        <origin>Table input</origin>
+        <origin>DIM_CLIENTE</origin>
         <comments>EMAIL</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1101,8 +1360,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>256</yloc>
+      <xloc>320</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1205,8 +1464,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>400</yloc>
+      <xloc>320</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1309,8 +1568,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>688</yloc>
+      <xloc>320</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1505,8 +1764,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>544</yloc>
+      <xloc>320</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1839,8 +2098,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>96</yloc>
+      <xloc>320</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1881,8 +2140,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>752</yloc>
+      <xloc>288</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1971,8 +2230,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>176</yloc>
+      <xloc>912</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2061,8 +2320,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>16</yloc>
+      <xloc>912</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2103,8 +2362,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>176</yloc>
+      <xloc>288</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2145,8 +2404,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>16</yloc>
+      <xloc>288</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2200,6 +2459,12 @@
       <key>
         <name>"SK_DIM_ESTADO_CONTRATO"</name>
         <field>"SK_DIM_ESTADO_CONTRATO"</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>"SK_DIM_SUCURSAL"</name>
+        <field>"SK_DIM_SUCURSAL"</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -2264,6 +2529,11 @@
         <update>Y</update>
       </value>
       <value>
+        <name>"SK_DIM_SUCURSAL"</name>
+        <rename>"SK_DIM_SUCURSAL"</rename>
+        <update>Y</update>
+      </value>
+      <value>
         <name>"MONTO_CONTRATO"</name>
         <rename>"MONTO_CONTRATO"</rename>
         <update>Y</update>
@@ -2298,8 +2568,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1696</xloc>
-      <yloc>544</yloc>
+      <xloc>1744</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2347,6 +2617,14 @@
         <presorted>N</presorted>
       </field>
       <field>
+        <name>codigo_sucursal</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <name>"FECHA_INICIO"</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
@@ -2372,8 +2650,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>400</yloc>
+      <xloc>1248</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2414,8 +2692,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>256</yloc>
+      <xloc>496</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2456,8 +2734,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>400</yloc>
+      <xloc>496</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2498,8 +2776,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>688</yloc>
+      <xloc>496</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2540,8 +2818,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>544</yloc>
+      <xloc>496</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2614,8 +2892,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
-      <yloc>400</yloc>
+      <xloc>1088</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2656,8 +2934,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>96</yloc>
+      <xloc>496</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2730,8 +3008,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>320</yloc>
+      <xloc>768</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2804,8 +3082,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>464</yloc>
+      <xloc>768</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2878,8 +3156,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>752</yloc>
+      <xloc>768</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2927,6 +3205,14 @@
         <presorted>N</presorted>
       </field>
       <field>
+        <name>codigo_sucursal</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <name>fecha_inicio</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
@@ -2952,8 +3238,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>176</yloc>
+      <xloc>768</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3001,6 +3287,14 @@
         <presorted>N</presorted>
       </field>
       <field>
+        <name>codigo_sucursal</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <name>FECHA</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
@@ -3026,8 +3320,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>16</yloc>
+      <xloc>768</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3100,8 +3394,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
-      <yloc>112</yloc>
+      <xloc>1088</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3174,8 +3468,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>608</yloc>
+      <xloc>768</xloc>
+      <yloc>688</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3223,6 +3517,14 @@
         <presorted>N</presorted>
       </field>
       <field>
+        <name>codigo_sucursal</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
         <name>fecha_inicio</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
@@ -3248,8 +3550,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>688</yloc>
+      <xloc>944</xloc>
+      <yloc>896</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3290,204 +3592,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>608</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Registro Contrato</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>Seguros_Alta_Vista_Connection</connection>
-    <sql>SELECT * FROM "SEGURO_G28052110"."REGISTRO_CONTRATO"</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta>
-      <value-meta>
-        <type>Integer</type>
-        <storagetype>normal</storagetype>
-        <name>numero_contrato</name>
-        <length>9</length>
-        <precision>0</precision>
-        <origin>Registro Contrato</origin>
-        <comments>numero_contrato</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>America/Caracas</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Integer</type>
-        <storagetype>normal</storagetype>
-        <name>codigo_producto</name>
-        <length>9</length>
-        <precision>0</precision>
-        <origin>Registro Contrato</origin>
-        <comments>codigo_producto</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>America/Caracas</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Integer</type>
-        <storagetype>normal</storagetype>
-        <name>codigo_cliente</name>
-        <length>9</length>
-        <precision>0</precision>
-        <origin>Registro Contrato</origin>
-        <comments>codigo_cliente</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>America/Caracas</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Date</type>
-        <storagetype>normal</storagetype>
-        <name>fecha_inicio</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>Registro Contrato</origin>
-        <comments>fecha_inicio</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>America/Caracas</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Date</type>
-        <storagetype>normal</storagetype>
-        <name>fecha_fin</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>Registro Contrato</origin>
-        <comments>fecha_fin</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>America/Caracas</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Number</type>
-        <storagetype>normal</storagetype>
-        <name>monto</name>
-        <length>10</length>
-        <precision>2</precision>
-        <origin>Registro Contrato</origin>
-        <comments>monto</comments>
-        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>America/Caracas</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>String</type>
-        <storagetype>normal</storagetype>
-        <name>estado_contrato</name>
-        <length>255</length>
-        <precision>-1</precision>
-        <origin>Registro Contrato</origin>
-        <comments>estado_contrato</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>America/Caracas</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-    </row-meta>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>48</xloc>
-      <yloc>384</yloc>
+      <xloc>288</xloc>
+      <yloc>688</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3520,8 +3626,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>320</yloc>
+      <xloc>496</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3554,8 +3660,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>464</yloc>
+      <xloc>496</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3588,8 +3694,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>752</yloc>
+      <xloc>496</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3622,8 +3728,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>608</yloc>
+      <xloc>496</xloc>
+      <yloc>688</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3664,8 +3770,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>400</yloc>
+      <xloc>944</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3698,8 +3804,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>176</yloc>
+      <xloc>624</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3732,8 +3838,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>16</yloc>
+      <xloc>624</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3774,8 +3880,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
-      <yloc>112</yloc>
+      <xloc>976</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3816,8 +3922,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>240</yloc>
+      <xloc>1248</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3858,8 +3964,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>688</yloc>
+      <xloc>944</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3876,11 +3982,12 @@
     </partitioning>
     <join_type>INNER</join_type>
     <step1>Ordenar</step1>
-    <step2>Ordenar prodcuto y est contrato</step2>
+    <step2>Ordenar Sucursales, Contratos y Productos</step2>
     <keys_1>
       <key>NUMERO_CONTRATO_1_1_1</key>
       <key>codigo_producto</key>
       <key>COD_CLIENTE</key>
+      <key>codigo_sucursal_1</key>
       <key>"FECHA_INICIO"</key>
       <key>"FECHA_FIN"</key>
     </keys_1>
@@ -3888,6 +3995,7 @@
       <key>numero_contrato</key>
       <key>COD_PRODUCTO</key>
       <key>codigo_cliente</key>
+      <key>COD_SUCURSAL</key>
       <key>fecha_inicio</key>
       <key>fecha_fin</key>
     </keys_2>
@@ -3900,8 +4008,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>544</yloc>
+      <xloc>1248</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3942,6 +4050,10 @@
         <rename>"SK_DIM_ESTADO_CONTRATO"</rename>
       </field>
       <field>
+        <name>SK_DIM_SUCURSAL</name>
+        <rename>"SK_DIM_SUCURSAL"</rename>
+      </field>
+      <field>
         <name>monto</name>
         <rename>"MONTO_CONTRATO"</rename>
       </field>
@@ -3956,8 +4068,548 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1360</xloc>
-      <yloc>544</yloc>
+      <xloc>1408</xloc>
+      <yloc>624</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>DIM SUCURSAL</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Seguros_Alta_Vista_Connection</connection>
+    <sql>select * from "SEGURO_DW_G28052110"."DIM_SUCURSAL"</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>SK_DIM_SUCURSAL</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>DIM SUCURSAL</origin>
+        <comments>SK_DIM_SUCURSAL</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>COD_SUCURSAL</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>DIM SUCURSAL</origin>
+        <comments>COD_SUCURSAL</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>NOMBRE_SUCURSAL</name>
+        <length>25</length>
+        <precision>-1</precision>
+        <origin>DIM SUCURSAL</origin>
+        <comments>NOMBRE_SUCURSAL</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>CODIGO_CIUDAD</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>DIM SUCURSAL</origin>
+        <comments>CODIGO_CIUDAD</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>NOMBRE_CIUDAD</name>
+        <length>45</length>
+        <precision>-1</precision>
+        <origin>DIM SUCURSAL</origin>
+        <comments>NOMBRE_CIUDAD</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>CODIGO_PAIS</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>DIM SUCURSAL</origin>
+        <comments>CODIGO_PAIS</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>NOMBRE_PAIS</name>
+        <length>45</length>
+        <precision>-1</precision>
+        <origin>DIM SUCURSAL</origin>
+        <comments>NOMBRE_PAIS</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>America/Caracas</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>928</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Ordenar Sucursal</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>COD_SUCURSAL</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>928</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sucursales</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>codigo_sucursal</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Unir Sucursales</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>Ordenar Sucursal</step1>
+    <step2>Sucursales</step2>
+    <keys_1>
+      <key>COD_SUCURSAL</key>
+    </keys_1>
+    <keys_2>
+      <key>codigo_sucursal</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Ordenar Sucursales</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>numero_contrato</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>codigo_producto</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>codigo_cliente</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>COD_SUCURSAL</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fecha_inicio</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fecha_fin</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Unir Sucursales, Contratos y Productos</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step1>Ordenar Sucursales</step1>
+    <step2>Ordenar prodcuto y est contrato</step2>
+    <keys_1>
+      <key>numero_contrato</key>
+      <key>codigo_producto</key>
+      <key>codigo_cliente</key>
+      <key>COD_SUCURSAL</key>
+      <key>fecha_inicio</key>
+      <key>fecha_fin</key>
+      <key>estado_contrato</key>
+    </keys_1>
+    <keys_2>
+      <key>numero_contrato</key>
+      <key>COD_PRODUCTO</key>
+      <key>codigo_cliente</key>
+      <key>codigo_sucursal</key>
+      <key>fecha_inicio</key>
+      <key>fecha_fin</key>
+      <key>DESCRIPCION_ESTADO_CONTRATO</key>
+    </keys_2>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>1008</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Ordenar Sucursales, Contratos y Productos</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>numero_contrato_1</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>COD_PRODUCTO</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>codigo_cliente</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>COD_SUCURSAL</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fecha_inicio</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>fecha_fin</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>monto</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>DESCRIPCION_ESTADO_CONTRATO</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1248</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
